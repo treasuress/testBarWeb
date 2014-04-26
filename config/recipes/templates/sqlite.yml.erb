@@ -1,0 +1,6 @@
+production:
+  adapter: sqlite3
+  pool: 5
+  enconding: utf8
+  timeout: 5000
+  database: <%= "#{shared_path}/db/#{sqlite_database}"%>
