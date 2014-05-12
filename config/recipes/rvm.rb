@@ -4,8 +4,8 @@ set_default(:rvm_type){:user}
 
 require "rvm/capistrano"
 
-after "deploy:install", "rvm:install_rvm"
-after "deploy:install", "rvm:install_ruby"
+before "deploy:install", "rvm:install_rvm"
+before "deploy:install", "rvm:install_ruby"
 after "deploy:update_code", "rvm:trust_rvmrc"
 
 desc "trust project .rvmrc automatically"
